@@ -12,13 +12,15 @@
     "typescript": "^3.2.2"
   },
   "devDependencies": {
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "surge": "^0.20.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy-surge": "surge --project ./build --domain infinite-poem.surge.sh"
   },
   "eslintConfig": {
     "extends": "react-app"
