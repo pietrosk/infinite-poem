@@ -1,0 +1,9 @@
+.poem-input {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1vh;
+}
+
+.poem-input__submit {
+    width: 100%;
+}
