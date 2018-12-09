@@ -24,9 +24,17 @@ class PoemInput extends Component<PoemInputProps, PoemInputState> {
   _onInputKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     const ENTER = 13;
     if (event.charCode === ENTER) {
-      this.props.onSubmit(this.state.line);
-      this.setState({line: ""});
+      this._submitAndClear();
     }
+  }
+
+  _onInputSubmitClick = () => {
+    this._submitAndClear();
+  }
+
+  _submitAndClear = () => {
+    this.props.onSubmit(this.state.line);
+    this.setState({line: ""});
   }
 
   render() {
@@ -35,7 +43,7 @@ class PoemInput extends Component<PoemInputProps, PoemInputState> {
       <div className="poem-input">
         Please type your poem line:
         <input type="text" onChange={this._onInputChange} onKeyPress={this._onInputKeyPress} value={line}/>
-        <input type="button" className="poem-input__submit" title="Submit" name="Submit" value="Submit"/>
+        <input type="button" onClick={this._onInputSubmitClick} className="poem-input__submit" title="Submit" name="Submit" value="Submit"/>
       </div>
     );
   }
