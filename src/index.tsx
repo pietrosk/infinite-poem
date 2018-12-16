@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import poemStore from './Stores/PoemStore';
+import { runReactiveStores } from './Stores/Reactive';
 
 ReactDOM.render(
-    <App />,
+    <App poemStore={poemStore} />,
     document.getElementById('root')
 );
+
+runReactiveStores();
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

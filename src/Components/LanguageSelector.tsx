@@ -11,9 +11,7 @@ interface LanguageSelectorProps {
 class LanguageSelector extends Component<LanguageSelectorProps> {
 
   _onLanguageClickHandler = (event: React.MouseEvent<HTMLInputElement>) => {
-    console.log('try language', event.currentTarget.value);
     this.props.store.currentLanguage = event.currentTarget.value as Language;
-    console.log(this.props.store.currentLanguage);
   }
 
   render() {

@@ -4,7 +4,6 @@ export type Language = 'en' | 'sk';
 
 export class LanguageStore {
 
-  languages: Language[] = [ 'en', 'sk' ];
   @observable private _currentLanguage: Language = 'en';
 
   @computed get currentLanguage(): Language {
@@ -18,3 +17,4 @@ export class LanguageStore {
 
 const languageStore = new LanguageStore();
 export default languageStore;
+

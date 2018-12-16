@@ -4,27 +4,19 @@ import PoemInput from './Components/PoemInput';
 import PoemLines from './Components/PoemLines';
 import LanguageSelector from './Components/LanguageSelector';
 import languageStore from './Stores/LanguageStore';
+import poemStore, { PoemStore } from './Stores/PoemStore';
 
-interface AppState {
-  readonly lines: string[];
+interface AppProps {
+  readonly poemStore: PoemStore;
 }
 
-class App extends Component<{}, AppState> {
-
-  constructor(props: any) {
-    super(props);
-    
-    this.state = {
-      lines: ['icinkin prvy poeeeem']
-    }
-  }
+class App extends Component<AppProps> {
 
   _onPoemInputSubmit = (newLine: string) => {
-    this.setState((oldState) => ({ lines: oldState.lines.concat([ newLine ]) }));
+    poemStore.verses.push(newLine);
   }
 
   render() {
-    const { lines } = this.state;
     return (
       <div className="app">
         <header className="app__header">
@@ -32,7 +24,7 @@ class App extends Component<{}, AppState> {
         </header>
         <LanguageSelector store={languageStore}/>
         <div className="app__content">
-          <PoemLines lines={lines}/>
+          <PoemLines poemStore={poemStore}/>
           <PoemInput onSubmit={this._onPoemInputSubmit}/>
         </div>
       </div>
