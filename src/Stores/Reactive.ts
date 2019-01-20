@@ -1,10 +1,7 @@
 import { autorun } from "mobx";
 import languageStore from "./LanguageStore";
 import poemStore from "./PoemStore";
-
-interface ApiVerseModel {
-  text: string,
-}
+import { ApiVerseModel } from "../Models/ApiVerseModel";
 
 export const runReactiveStores = () => {
   var poemLoader = autorun(() => {

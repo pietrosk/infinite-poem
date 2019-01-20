@@ -13,7 +13,7 @@ interface AppProps {
 class App extends Component<AppProps> {
 
   _onPoemInputSubmit = (newLine: string) => {
-    poemStore.verses.push(newLine);
+    poemStore.addVerse(newLine);
   }
 
   render() {
