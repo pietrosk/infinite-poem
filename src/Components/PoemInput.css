@@ -5,6 +5,10 @@
     padding-top: 1vh;
 }
 
+.poem-input input {
+  outline: none;
+}
+
 .poem-input__submit {
     width: 100%;
 }
