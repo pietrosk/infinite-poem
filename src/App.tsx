@@ -23,10 +23,8 @@ class App extends Component<AppProps> {
           Infinite Poem
         </header>
         <LanguageSelector store={languageStore}/>
-        <div className="app__content">
-          <PoemLines poemStore={poemStore}/>
-          <PoemInput onSubmit={this._onPoemInputSubmit}/>
-        </div>
+        <PoemLines poemStore={poemStore}/>
+        <PoemInput onSubmit={this._onPoemInputSubmit}/>
       </div>
     );
   }
