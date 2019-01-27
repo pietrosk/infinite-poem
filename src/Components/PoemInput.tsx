@@ -42,7 +42,7 @@ class PoemInput extends Component<PoemInputProps, PoemInputState> {
     return (
       <div className="poem-input">
         <div>Please type your poem line:</div>
-        <input type="text" onChange={this._onInputChange} onKeyPress={this._onInputKeyPress} value={line}/>
+        <input type="text" className="poem-input__text" onChange={this._onInputChange} onKeyPress={this._onInputKeyPress} value={line}/>
         <input type="button" onClick={this._onInputSubmitClick} className="poem-input__submit" title="Submit" name="Submit" value="Submit"/>
       </div>
     );

@@ -5,10 +5,30 @@
     padding-top: 1vh;
 }
 
+.poem-input > * {
+  margin-bottom: 1vh;
+}
+
 .poem-input input {
   outline: none;
 }
 
+.poem-input__text {
+  height: 30px;
+  border: none;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
 .poem-input__submit {
-    width: 100%;
+  width: 100%;
+  border: none;
+  color: lightgrey;
+  background-color: #434853;
+  height: 30px;
+  cursor: pointer;
+}
+
+.poem-input__submit:hover {
+  background-color: #515661;
 }
