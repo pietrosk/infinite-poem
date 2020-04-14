@@ -20,7 +20,7 @@ class App extends Component<AppProps> {
     return (
       <div className="app">
         <header className="app__header">
-          Infinite Poem
+          Infinite Poem (v{process.env.REACT_APP_INFINITE_POEM_VERSION})
         </header>
         <LanguageSelector store={languageStore}/>
         <PoemLines poemStore={poemStore}/>
